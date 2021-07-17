@@ -2,7 +2,7 @@ module.exports = {
   purge: {
     content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
     options: {
-      safelist: [/^text-/],
+      safelist: [/^text-/,  'py-2.5',  'pl-8', 'pr-4', 'border-0', 'border-r', 'border-solid', 'border-gray-900'],
     },
   },
   darkMode: 'class', // or 'media' or 'class'
