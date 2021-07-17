@@ -131,7 +131,7 @@ const SinglePost = (props) => {
       .sort((a, b) => (b.voteCount > a.voteCount ? 1 : -1));
   }
 
-  if (userLoading) {
+  if (postLoading || userLoading) {
     return <Loader mainLoader={true} />;
   }
 
