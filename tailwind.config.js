@@ -32,9 +32,9 @@ module.exports = {
       animation: {
         bounce200: 'bounce 10ms infinite 200ms',
         bounce400: 'bounce 10ms infinite 400ms',
-        bounce1: 'bounceDelay 1.4s ease-in-out -.32s both',
-        bounce2: 'bounceDelay 1.4s ease-in-out -.16s both',
-        bounce3: 'bounceDelay 1.4s ease-in-out  both',
+        bounce1: 'bounceDelay 1.4s ease-in-out -.32s both infinite',
+        bounce2: 'bounceDelay 1.4s ease-in-out -.16s both infinite',
+        bounce3: 'bounceDelay 1.4s ease-in-out  both infinite',
         spinner: 'rotation 0.6s infinite linear'
       },
       keyframes: {
