@@ -3,7 +3,7 @@ module.exports = {
   purge: {
     content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
     options: {
-      safelist: [/(from|via|to|border|bg|text)-(.*)-(\\d{1}0{1,2})/],
+      safelist: [/^text-/],
     },
   },
   darkMode: 'class', // or 'media' or 'class'
