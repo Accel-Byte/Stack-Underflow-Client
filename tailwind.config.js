@@ -2,7 +2,7 @@ module.exports = {
   mode: 'jit',
   purge: {
     content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    safelist: ['text-yellow-500'],
+    safelist: [/(from|via|to|border|bg|text)-(.*)-(\\d{1}0{1,2})/]
   },
   darkMode: 'class', // or 'media' or 'class'
   theme: {
