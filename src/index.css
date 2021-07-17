@@ -6,17 +6,17 @@
 @tailwind utilities;
 
 @layer base{
-  ::-webkit-scrollbar {
-    width: 5px;
+  body::-webkit-scrollbar {
+    width: 5px !important;
   }
-  ::-webkit-scrollbar-thumb{
-    background-color: #374151;
+  body::-webkit-scrollbar-thumb{
+    background-color: #374151 !important;
     border-radius: 10px;
   }
-  ::-webkit-scrollbar-track{
-    background: #1F1D2B;
+  body::-webkit-scrollbar-track{
+    background: #1F1D2B !important;
   }
-  ::file-selector-button {
+  body::file-selector-button {
     @apply text-gray-300 bg-card-dark hover:bg-gray-700
       font-medium text-sm cursor-pointer
       border-0 border-r border-solid border-gray-900
@@ -24,7 +24,7 @@
     margin-inline-start: -1rem;
     margin-inline-end: 1rem;
   }
-  ::-webkit-file-upload-button {
+  body::-webkit-file-upload-button {
     @apply text-gray-300 bg-card-dark hover:bg-gray-700
       font-medium text-sm cursor-pointer
       border-0 border-r border-solid border-gray-900
@@ -33,7 +33,7 @@
     margin-inline-end: 1rem;
   }
   
-  ::selection {
+  body::selection {
     background: #80CBC4;
     color: black;
   }
