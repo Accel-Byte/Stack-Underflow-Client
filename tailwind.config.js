@@ -40,6 +40,7 @@ module.exports = {
         bounce2: 'bounceDelay 1.4s ease-in-out -.16s both infinite',
         bounce3: 'bounceDelay 1.4s ease-in-out  both infinite',
         spinner: 'rotation 0.6s infinite linear',
+        updateImageLoading: 'spinner 1.5s linear infinite'
       },
       keyframes: {
         bounceDelay: {
