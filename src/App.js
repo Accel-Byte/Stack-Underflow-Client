@@ -41,7 +41,7 @@ function App() {
                     <Route exact path="/createPost" component={CreatePost} />
                     <Route exact path="/posts/:postId" component={SinglePost} />
                     <Route exact path="/dashboard/:userId" component={Dashboard} />
-                    <Route path="/404" component={NotFound} />
+                    <Route path="*" component={NotFound} />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
