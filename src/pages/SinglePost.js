@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { gql, useQuery, useMutation } from '@apollo/client';
 import moment from 'moment';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { AuthContext } from '../context/auth';
@@ -31,8 +30,8 @@ const SinglePost = (props) => {
         setPostDoesNotExist(true);
       }
     },
-    onError: (error) => {
-      if (error.message === 'PostNotFound') {
+    onError: (errors) => {
+      if (errors.graphQLErrors[0].extensions.code === 'POST_NOT_FOUND') {
         setPostDoesNotExist(true);
       }
     },
@@ -139,7 +138,7 @@ const SinglePost = (props) => {
 
   return postDoesNotExist ? (
     <NotFound />
-  ) : (
+  ) : postLoading ? (
     <>
       <div className="dark:bg-primary-light bg-gray-100 p-10 pt-24 min-h-screen transition duration-500 font-poppins">
         <div className="grid grid-cols-7 gap-x-14">
@@ -247,7 +246,7 @@ const SinglePost = (props) => {
         </div>
       </div>
     </>
-  );
+  ) : null;
 };
 
 export default SinglePost;
