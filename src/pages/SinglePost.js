@@ -138,7 +138,7 @@ const SinglePost = (props) => {
 
   return postDoesNotExist ? (
     <NotFound />
-  ) : postLoading ? (
+  ) : postLoading ? null : (
     <>
       <div className="dark:bg-primary-light bg-gray-100 p-10 pt-24 min-h-screen transition duration-500 font-poppins">
         <div className="grid grid-cols-7 gap-x-14">
@@ -246,7 +246,7 @@ const SinglePost = (props) => {
         </div>
       </div>
     </>
-  ) : null;
+  );
 };
 
 export default SinglePost;
