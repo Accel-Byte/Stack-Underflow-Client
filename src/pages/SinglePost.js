@@ -134,7 +134,7 @@ const SinglePost = (props) => {
     return <Loader mainLoader={true} />;
   }
 
-  let circleCommonClasses = 'h-3 w-3 bg-card-dark rounded-full';
+  let circleCommonClasses = 'group-hover:bg-gray-200 h-3 w-3 bg-card-dark rounded-full';
 
   return postDoesNotExist ? (
     <NotFound />
@@ -218,7 +218,7 @@ const SinglePost = (props) => {
                     <Editor editorText={answer} handleChange={answerChange} />
                     <div className="py-1">
                       <button
-                        className="mt-3 text-lg font-semibold bg-login-button-dark w-full text-card-dark rounded-lg px-6 py-3 block shadow-xl hover:bg-login-button-dark-hover hover:text-login-button-dark focus:outline-none"
+                        className="group mt-3 text-lg font-semibold bg-login-button-dark w-full text-card-dark rounded-lg px-6 py-3 block shadow-xl hover:bg-login-button-dark-hover hover:text-login-button-dark focus:outline-none"
                         type="submit"
                       >
                         {submitAnswerLoading ? (
