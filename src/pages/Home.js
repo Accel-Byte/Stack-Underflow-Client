@@ -27,7 +27,6 @@ function Home() {
   const notInitialRender = useRef(false);
 
   const {
-    loading,
     data: {
       getPosts: { posts } = {},
       getPosts: { totalPages } = 0,
@@ -64,7 +63,7 @@ function Home() {
       notInitialRender.current = true;
     }
     return () => {};
-  }, [currentPage, currentTag, currentSearch, featured]);
+  }, [currentPage, currentTag, currentSearch, featured, refetch]);
 
   useEffect(() => {
     fetch('data/tags.json', {

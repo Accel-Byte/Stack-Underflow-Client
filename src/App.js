@@ -2,7 +2,6 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  useLocation,
   Switch,
 } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -18,6 +17,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import CreatePost from './pages/createPost';
 import SinglePost from './pages/SinglePost';
+import Verify from './components/verify';
 import NotFound from './components/404';
 
 function App() {
@@ -41,6 +41,7 @@ function App() {
                     <Route exact path="/createPost" component={CreatePost} />
                     <Route exact path="/posts/:postId" component={SinglePost} />
                     <Route exact path="/dashboard/:userId" component={Dashboard} />
+                    <Route exact path="/verify" component={Verify} />
                     <Route path="*" component={NotFound} />
                   </Switch>
                 </CSSTransition>

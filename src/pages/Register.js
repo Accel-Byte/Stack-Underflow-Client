@@ -22,6 +22,9 @@ function Register(props) {
       context.login(userData);
       props.history.push('/');
     },
+    onCompleted(_){
+      props.history.push('/verify');
+    },
     onError(err) {
       console.log(err.graphQLErrors[0]);
       setErrors(err.graphQLErrors[0].extensions.exception.errors);

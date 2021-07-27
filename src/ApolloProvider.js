@@ -7,11 +7,11 @@ import { setContext } from 'apollo-link-context';
 import { WebSocketLink } from '@apollo/client/link/ws';
 
 let httpLink = createUploadLink({
-  uri: 'https://stack-underflow-app.herokuapp.com/graphql'
+  uri: 'http://localhost:5000/graphql'
 });
 
 const wsLink = new WebSocketLink({
-  uri: 'wss://stack-underflow-app.herokuapp.com/subscriptions',
+  uri: 'ws://localhost:5000/graphql/subscriptions',
   options: {
     reconnect: true
   }
